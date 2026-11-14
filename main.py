@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """food-picture-01: write one picture of food to /output/entry.png.
 
-The picture is a steaming bowl of premium tonkotsu ramen (entry.png,
-bundled with this program). The program copies it byte-for-byte to
-$MAKEFUN_OUTPUT_DIR/entry.png and verifies the size.
+The picture is a gourmet cheeseburger (entry.png, bundled with this
+program): a glossy sesame brioche bun, melted cheddar cheese dripping
+down a juicy seared beef patty, fresh lettuce and tomato, steam
+rising, on a dark slate board with warm side lighting. The program
+copies it byte-for-byte to $MAKEFUN_OUTPUT_DIR/entry.png and verifies
+the size.
 """
 import os
 import shutil
