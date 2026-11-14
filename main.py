@@ -20,6 +20,10 @@ def main() -> int:
     shutil.copyfile(src, dst)
     size = os.path.getsize(dst)
     assert size <= 1_048_576, f"entry.png too large: {size} bytes (limit 1 MiB)"
+    # The judge reads exactly these bytes, so confirm the format too.
+    with open(dst, "rb") as fh:
+        magic = fh.read(3)
+    assert magic in (b"\xff\xd8\xff", b"\x89PN"), "entry.png is not a JPEG or PNG"
     print(f"wrote {dst} ({size} bytes)")
     return 0
 
